@@ -1,5 +1,4 @@
-@use 'sass:color';
-@use 'app/styles/_variables' as *;
+@use '../../../styles/_variables' as *;
 
 .arrowButton {
   display: flex;
@@ -15,7 +14,7 @@
   z-index: $z-index-ui;
 
   &:hover {
-    background-color:  color.adjust(#fff, $lightness: -5%);
+    background-color: #f2f2f2;;
   }
   
   &.swiper-button-disabled {

@@ -26,20 +26,17 @@ module.exports = {
             loader: 'css-loader',
             options: {
               modules: {
-                localIdentName: '[name]__[local]--[hash:base64:5]',
+                mode: 'local',
+                exportLocalsConvention: 'camelCase',
+                namedExport: false,
               },
               sourceMap: true,
             },
           },
-          'resolve-url-loader',
           { 
             loader: 'sass-loader',
             options: {
-                sourceMap: true,
-                webpackImporter: true, 
-              sassOptions: {
-                includePaths: [path.resolve(__dirname, 'src/')],
-              },
+              sourceMap: true,
             },
           },
         ],
@@ -53,15 +50,14 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-                sourceMap: true,
+              sourceMap: true,
             },
           },
           'resolve-url-loader',
           { 
             loader: 'sass-loader',
             options: {
-                sourceMap: true,
-                webpackImporter: true,
+              sourceMap: true,
               sassOptions: {
                 includePaths: [path.resolve(__dirname, 'src/')],
               },
@@ -101,10 +97,15 @@ module.exports = {
       directory: path.join(__dirname, 'dist'),
     },
     compress: true,
-    port: 3000,
-    open: true,
+    port: 5000,
+    host: '0.0.0.0',
+    allowedHosts: 'all',
+    open: false,
     hot: true,
     historyApiFallback: true,
+    headers: {
+      'Cache-Control': 'no-cache, no-store, must-revalidate',
+    },
   },
   devtool: 'source-map',
 };
