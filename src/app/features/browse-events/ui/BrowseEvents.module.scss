@@ -1,0 +1,38 @@
+@use 'app/styles/variables' as *;
+
+.sliderWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.buttonPrev,
+.buttonNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.buttonPrev {
+  left: 0;
+}
+
+.buttonNext {
+  right: 0;
+}
+
+@media (max-width: 767px) {
+  .sliderWrapper {
+    padding: 0 30px;
+  }
+  
+  .buttonPrev {
+    left: -10px;
+  }
+
+  .buttonNext {
+    right: -10px;
+  }
+}

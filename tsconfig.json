@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      "noImplicitAny": true,
+      "module": "es6",
+      "target": "es5",
+      "jsx": "react-jsx",
+      "allowJs": true,
+      "moduleResolution": "node",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "sourceMap": true,
+      "lib": ["dom", "dom.iterable", "esnext"],
+      "baseUrl": "./src",
+      "paths": {
+        "app/*": ["app/*"],
+        "pages/*": ["app/pages/*"],
+        "widgets/*": ["app/widgets/*"],
+        "features/*": ["app/features/*"],
+        "entities/*": ["app/entities/*"],
+        "shared/*": ["app/shared/*"]
+      }
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+}

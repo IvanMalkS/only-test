@@ -1,0 +1,48 @@
+@use 'app/styles/_variables' as *;
+
+.timelineBlock {
+  position: relative;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    border: 1px solid $border-color;
+    border-radius: 10px;
+    pointer-events: none;
+  }
+}
+
+.title {
+  font-family: $font-accent;
+  font-size: 56px;
+  color: $primary-text;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .timelineBlock {
+    padding: 40px 0;
+    
+    &::before {
+      top: 20px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+    }
+  }
+  
+  .title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+}

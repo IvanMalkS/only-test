@@ -1,0 +1,35 @@
+{
+  "name": "omly-test",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "scheduler": "^0.23.0",
+    "swiper": "^12.0.2",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/swiper": "^5.4.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.4",
+    "resolve-url-loader": "^5.0.0",
+    "sass": "^1.93.2",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.4",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}
