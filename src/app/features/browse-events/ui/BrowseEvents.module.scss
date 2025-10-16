@@ -12,7 +12,7 @@
     max-width: 1281px;
     padding: 0;
     margin: 0;
-    margin-left: -22px;
+    margin-left: 60px;
   }
 }
 
@@ -50,16 +50,11 @@
 }
 
 .paginationContainer {
-  margin-top: 75px;
+  margin-top: 80px;
 
   @media (min-width: $desktop-width) {
     margin: 0;
   }
-}
-
-.paginationFraction {
-  font-size: 14px;
-  margin-bottom: 9px;
 }
 
 .pagination {
@@ -90,14 +85,6 @@
     padding: 0 30px;
   }
 
-}
-
-.paginationFraction {
-  display: block;
-
-  @media (min-width: $desktop-width) {
-    display: none;
-  }
 }
 
 .eventSlider {

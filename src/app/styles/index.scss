@@ -13,6 +13,7 @@ body {
 
 .container {
   margin: 0 auto;
+  max-width: $mobile-width;
 
   @media (min-width: $desktop-width) {
     max-width: 1440px;

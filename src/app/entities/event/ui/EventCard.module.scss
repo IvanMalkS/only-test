@@ -16,7 +16,7 @@
   font-weight: 400;
   text-transform: uppercase;
 
-  @media (min-width: $mobile-width) {
+  @media (min-width: $desktop-width) {
     font-size: 25px;
   }
 }
@@ -29,7 +29,7 @@
   color: $primary-text;
   font-weight: 400;
 
-  @media (min-width: $mobile-width) {
+  @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 1.5;
   }
