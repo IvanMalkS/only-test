@@ -13,7 +13,7 @@ export const ArrowButton: React.FC<ArrowButtonProps> = ({ direction, className, 
   );
   return (
     <button className={buttonClassName} {...props}>
-      <img src="/arrow.svg" alt={`arrow ${direction}`} />
+      <img src={`${process.env.PUBLIC_URL}/arrow.svg`}  alt={`arrow ${direction}`} />
     </button>
   );
 };

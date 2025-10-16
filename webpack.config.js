@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const pkg = require('./package.json');
+const webpack = require('webpack');
 
 let publicPath = '/';
 
@@ -96,7 +97,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-     new CopyWebpackPlugin({
+    new CopyWebpackPlugin({
       patterns: [
         {
           from: path.resolve(__dirname, 'public'),
@@ -107,6 +108,9 @@ module.exports = {
         },
       ],
     }),
+    new webpack.DefinePlugin({
+      'process.env.PUBLIC_URL': JSON.stringify(publicPath.slice(0, -1))
+    })
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
