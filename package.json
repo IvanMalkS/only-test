@@ -5,7 +5,7 @@
   "homepage": "https://ivanmalks.github.io/only-test/",
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production",
+    "build": "cross-env NODE_ENV=production  webpack --mode production",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --max-warnings=0",
     "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix --max-warnings=0"
@@ -27,6 +27,7 @@
     "@types/swiper": "^5.4.3",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^13.0.1",
+    "cross-env": "^10.1.0",
     "css-loader": "^7.1.2",
     "eslint": "^9.37.0",
     "eslint-config-prettier": "^10.1.8",
