@@ -20,7 +20,8 @@
 @media (min-width: $desktop-width) {
   .timelineBlock {
     position: relative;
-    padding: 170px 160px 104px 322px;
+    max-width: 1440px;
+
     @include flex-column;
     align-items: center;
     min-height: 100vh;
@@ -42,7 +43,7 @@
 
 .controls {
   position: absolute;
-  bottom: 17px;
+  bottom: -100px;
   left: 15px;
   @include flex-column;
   gap: 10px;
@@ -59,6 +60,7 @@
   @include flex-center;
   gap: 8px;
   align-items: center;
+
   @media (min-width: $desktop-width) {
     margin-bottom: 60px;
     gap: 20px;

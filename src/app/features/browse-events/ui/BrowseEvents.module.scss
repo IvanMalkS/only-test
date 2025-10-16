@@ -24,6 +24,7 @@
 
   @media (min-width: $desktop-width) {
     top: 41px;
+    display: block;
   }
 
   &:disabled {
@@ -89,13 +90,6 @@
     padding: 0 30px;
   }
 
-  .buttonPrev {
-    left: 0;
-  }
-
-  .buttonNext {
-    right: -10px;
-  }
 }
 
 .paginationFraction {

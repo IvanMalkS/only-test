@@ -2,6 +2,7 @@
 @use '../../../styles/mixins' as *;
 
 .timePeriodDates {
+  position: relative;
   @include flex-start;
   font-size: 56px;
   font-family: 'PT Sans', sans-serif;

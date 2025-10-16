@@ -11,6 +11,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.container {
+  margin: 0 auto;
+
+  @media (min-width: $desktop-width) {
+    max-width: 1440px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
