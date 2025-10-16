@@ -22,7 +22,7 @@
     color: $accent-pink;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     border: none;
     font-size: 200px;
     line-height: 160px;

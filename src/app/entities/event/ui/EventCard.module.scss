@@ -16,7 +16,7 @@
   font-weight: 400;
   text-transform: uppercase;
 
-  @media (min-width: 767px) {
+  @media (min-width: $mobile-width) {
     font-size: 25px;
   }
 }
@@ -29,7 +29,7 @@
   color: $primary-text;
   font-weight: 400;
 
-  @media (min-width: 768px) {
+  @media (min-width: $mobile-width) {
     font-size: 20px;
     line-height: 1.5;
   }
@@ -38,7 +38,7 @@
 .small {
   width: 173px;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     width: 320px;
   }
 }
@@ -46,7 +46,7 @@
 .medium {
   width: 255px;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     width: 400px;
   }
 }
@@ -54,7 +54,7 @@
 .large {
   width: 260px;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     width: 440px;
   }
 }

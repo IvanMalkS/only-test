@@ -17,7 +17,7 @@
   max-width: 123px;
 }
 
-@media (min-width: 1080px) {
+@media (min-width: $desktop-width) {
   .timelineBlock {
     position: relative;
     padding: 170px 160px 104px 322px;
@@ -48,7 +48,7 @@
   gap: 10px;
   align-self: flex-start;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     position: relative;
     margin-left: 78px;
     gap: 20px;
@@ -59,7 +59,7 @@
   @include flex-center;
   gap: 8px;
   align-items: center;
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     margin-bottom: 60px;
     gap: 20px;
   }

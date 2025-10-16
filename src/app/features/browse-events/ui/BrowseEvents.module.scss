@@ -8,7 +8,7 @@
   margin: 0 auto;
   padding: 20px 0 32px 0;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     max-width: 1281px;
     padding: 0;
     margin: 0;
@@ -22,7 +22,7 @@
   position: absolute;
   bottom: 13px;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     top: 41px;
   }
 
@@ -34,7 +34,7 @@
 .buttonPrev {
   left: 10px;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     left: -80px;
   }
 }
@@ -42,7 +42,7 @@
 .buttonNext {
   left: 33px;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     left: auto;
     right: -80px;
   }
@@ -51,7 +51,7 @@
 .paginationContainer {
   margin-top: 75px;
 
-  @media (min-width: 1080px) {
+  @media (min-width: $desktop-width) {
     margin: 0;
   }
 }
@@ -65,7 +65,7 @@
   @include flex-center;
   gap: 2px;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     display: none;
   }
 }
@@ -73,7 +73,7 @@
 .bullet {
   width: 6px;
   height: 6px;
-  background-color: #42567a;
+  background-color: $primary-text;
   opacity: 0.4;
   border-radius: 50%;
   margin: 0 4px;
@@ -84,7 +84,7 @@
   opacity: 1;
 }
 
-@media (max-width: 767px) {
+@media (min-width: $mobile-width) {
   .sliderWrapper {
     padding: 0 30px;
   }
@@ -101,7 +101,7 @@
 .paginationFraction {
   display: block;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop-width) {
     display: none;
   }
 }
