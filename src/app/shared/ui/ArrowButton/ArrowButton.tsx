@@ -1,16 +1,22 @@
 import React from 'react';
 import styles from './ArrowButton.module.scss';
-import ArrowIcon from './arrow.svg';
+import clsx from 'clsx';
 
-interface ArrowButtonProps {
+interface ArrowButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   direction: 'prev' | 'next';
-  className?: string;
 }
 
-export const ArrowButton: React.FC<ArrowButtonProps> = ({ direction, className }) => {
+export const ArrowButton: React.FC<ArrowButtonProps> = ({ direction, className, ...props }) => {
+  const buttonClassName = clsx(
+    styles.arrowButton,
+    {
+      [styles.next]: direction === 'next',
+    },
+    className
+  );
   return (
-    <button className={`${styles.arrowButton} ${styles[direction]} ${className}`}>
-      <img src={ArrowIcon} alt={`arrow ${direction}`} />
+    <button className={buttonClassName} {...props}>
+      <img src="/arrow.svg" alt={`arrow ${direction}`} />
     </button>
   );
 };

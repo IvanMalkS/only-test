@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "clsx": "^2.1.1",
     "gsap": "^3.13.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -21,6 +22,7 @@
     "@types/react-dom": "^18.3.0",
     "@types/swiper": "^5.4.3",
     "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^13.0.1",
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.4",
     "resolve-url-loader": "^5.0.0",

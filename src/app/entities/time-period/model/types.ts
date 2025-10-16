@@ -1,14 +1,16 @@
 export interface Event {
     year: number | string;
     description: string;
+    size?: 'small'| 'medium' | 'large';
   }
   
-  export interface TimePeriod {
-    id: number;
-    title: string;
-    dateRange: {
-      start: number;
-      end: number;
-    };
-    events: Event[];
-  }
+interface DateRange {
+  start: number;
+  end: number;
+}
+export interface TimePeriod {
+  id: number;
+  title: string;
+  dateRange: DateRange
+  events: Event[];
+}

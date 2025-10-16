@@ -1,26 +1,88 @@
 @use '../../../styles/_variables' as *;
 
-.sliderWrapper {
+
+.browserEventsContainer {
   position: relative;
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 0 80px;
+  padding: 20px 0 32px 0 ;
+
+  @media (min-width: 1024px) {
+    max-width: 1281px;
+    padding: 0;
+    margin: 0;
+    margin-left: -22px;
+  }
 }
 
 .buttonPrev,
 .buttonNext {
+  display: none;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 13px;
+
+  @media (min-width: 1024px) {
+    top: 41px;
+  }
+
+   &:disabled {
+    display: none;
+  }
 }
 
 .buttonPrev {
-  left: 0;
+  left: 10px;
+
+  @media (min-width: 1024px) {
+    left: -80px;
+  }
 }
 
 .buttonNext {
-  right: 0;
+  left: 33px;
+
+  @media (min-width: 1024px) {
+    left: auto;
+    right: -80px;
+  }
+}
+
+.paginationContainer {
+  margin-top: 75px;
+
+  @media (min-width: 1080px) {
+    margin: 0;
+  }
+}
+
+.paginationFraction {
+  font-size: 14px;
+  margin-bottom: 9px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  background-color: #42567A;
+  opacity: 0.4;
+  border-radius: 50%;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.bulletActive {
+  opacity: 1;
 }
 
 @media (max-width: 767px) {
@@ -29,10 +91,47 @@
   }
   
   .buttonPrev {
-    left: -10px;
+    left: 0;
   }
 
   .buttonNext {
     right: -10px;
   }
 }
+
+.paginationFraction {
+  display: block;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.eventSlider {
+  :global(.swiper-slide) {
+    transition: opacity 0.4s ease;
+  }
+  :global(.swiper-slide-next) {
+    opacity: 0.4;
+  }
+  :global(.swiper-slide-prev) {
+    opacity: 0.4;
+  }
+  :global(.swiper-slide-active) {
+    opacity: 1;
+  }
+
+  @media (min-width: 1024px) {
+    margin-left: 10px;
+    :global(.swiper-slide-next) {
+      opacity: 1;
+    }
+    :global(.swiper-slide-prev) {
+      opacity: 1;
+    }
+    :global(.swiper-slide-active) {
+      opacity: 1;
+    }
+  }
+}
+

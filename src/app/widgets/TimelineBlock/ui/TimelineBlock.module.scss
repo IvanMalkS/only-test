@@ -1,48 +1,69 @@
 @use '../../../styles/variables' as *;
 
 .timelineBlock {
-  position: relative;
-  padding: 80px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    right: 50px;
-    bottom: 50px;
-    border: 1px solid $border-color;
-    border-radius: 10px;
-    pointer-events: none;
-  }
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 59px;
 }
 
 .title {
-  font-family: $font-accent;
-  font-size: 56px;
+  font-size: 20px;
+  font-family: $font-main;
+  font-weight: 700;
   color: $primary-text;
-  margin-bottom: 40px;
-  text-align: center;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+  max-width: 123px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 1080px) {
   .timelineBlock {
-    padding: 40px 0;
-    
-    &::before {
-      top: 20px;
-      left: 20px;
-      right: 20px;
-      bottom: 20px;
-    }
+    position: relative;
+    padding: 170px 160px 104px 322px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
   }
   
   .title {
-    font-size: 36px;
-    margin-bottom: 20px;
+    display: flex;
+    font-family: $font-accent;
+    font-size: 49px;
+    color: $primary-text;
+    margin: 0;
+    line-height: 136%;
+    align-self: flex-start;
+    border-left: 4px solid;
+    border-image: linear-gradient(to bottom, $accent-blue, $accent-pink) 1;
+    padding-left: 75px;
+  }
+}
+
+.controls {
+  position: absolute;
+  bottom: 17px;
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-self: flex-start;
+
+  @media (min-width: 1024px) {
+    position: relative;
+    margin-left: 78px;
+    gap: 20px;
+  }
+
+}
+
+.controlsButtons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  @media (min-width: 1024px) {
+    margin-bottom: 60px;
+    gap: 20px;
   }
 }

@@ -16,9 +16,11 @@
   &:hover {
     background-color: #f2f2f2;;
   }
+
   
-  &.swiper-button-disabled {
+  &:disabled {
     opacity: 0.5;
+    pointer-events: none;
     cursor: default;
   }
 
@@ -32,6 +34,6 @@
   }
 }
 
-.prev {
+.next {
   transform: rotate(180deg);
 }

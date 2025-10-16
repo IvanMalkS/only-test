@@ -3,33 +3,59 @@
 .card {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 15px;
 }
 
 .year {
   margin: 0;
+  font-size: 16px;
   font-family: $font-accent;
-  font-size: 25px;
   line-height: 1.2;
   color: $accent-blue;
   font-weight: 400;
   text-transform: uppercase;
 
-  @media (max-width: 767px) {
-    font-size: 16px;
+  @media (min-width: 767px) {
+      font-size: 25px;
   }
 }
 
 .description {
   margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
   font-family: $font-main;
-  font-size: 20px;
-  line-height: 1.5;
   color: $primary-text;
   font-weight: 400;
 
-  @media (max-width: 767px) {
-    font-size: 14px;
-    line-height: 1.45;
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+
+.small {
+  width: 173px;
+
+  @media (min-width: 1024px) {
+    width: 320px;
+  }
+}
+
+.medium {
+  width: 255px;
+
+  @media (min-width: 1024px) {
+    width: 400px;
+  }
+}
+
+.large {
+  width: 260px;
+
+  
+  @media (min-width: 1024px) {
+    width: 440px;
   }
 }

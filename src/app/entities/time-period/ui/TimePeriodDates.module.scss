@@ -1,0 +1,36 @@
+@use '../../../styles/variables' as *;
+
+.timePeriodDates {
+  display: flex;
+  font-size: 56px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 700;
+  word-wrap: break-word;
+  padding-top: 53px;
+  padding-bottom: 61px;
+  border-bottom: 1px solid $primary-border;
+  gap: 20px;
+
+  .startDate {
+    display: block;
+    color: $accent-blue;
+  }
+
+  .endDate {
+    display: block;
+    color: $accent-pink;
+  }
+
+  @media (min-width: 1024px) {
+    border: none;
+    font-size: 200px;
+    line-height: 160px;
+    padding: 0;
+    z-index: 1;
+    position: relative;
+    margin-top: 82px;
+    margin-bottom: 148px;
+    gap: 83px;
+
+  }
+}
