@@ -7,11 +7,11 @@
   width: calc(#{2 * $circle-radius}px);
   height: calc(#{2 * $circle-radius}px);
   pointer-events: none;
-  left: 55%;
+  left: 50%;
   transform: translateX(-50%);
   z-index: $z-index-circle-container;
   top: 210px;
-  
+
   @media (min-width: $desktop-width) {
     display: block;
   }
@@ -25,7 +25,6 @@
   border: 1px solid rgba($primary-text, 0.2);
   pointer-events: all;
 }
-
 
 .dotWrapper {
   position: absolute;
@@ -46,7 +45,7 @@
   border-radius: 50%;
   border: none;
   transition: transform 0.3s ease;
-  
+
   .dotWrapper:hover & {
     transform: scale(2.5);
   }
@@ -89,8 +88,8 @@
 }
 
 .controls {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
 }

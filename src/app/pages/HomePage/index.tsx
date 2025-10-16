@@ -2,7 +2,7 @@ import { TimelineBlock } from 'widgets/TimelineBlock';
 
 const HomePage = () => {
   return (
-    <main className='container'>
+    <main className="container">
       <TimelineBlock />
     </main>
   );

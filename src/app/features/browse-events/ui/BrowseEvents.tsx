@@ -72,8 +72,8 @@ export const BrowseEvents: React.FC<BrowseEventsProps> = ({ events }) => {
       </Swiper>
       <div className={styles.paginationContainer}>
         <div className={styles.pagination}></div>
-        <ArrowButton direction="prev" className={styles.buttonPrev} />
-        <ArrowButton direction="next" className={styles.buttonNext} />
+        <ArrowButton direction="prev" arrowType="secondary" className={styles.buttonPrev} />
+        <ArrowButton direction="next" arrowType="secondary" className={styles.buttonNext} />
       </div>
     </div>
   );

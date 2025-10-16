@@ -65,7 +65,6 @@ export const SwitchTimePeriod: React.FC<SwitchTimePeriodProps> = ({
           </div>
         </div>
       </div>
-   
     </>
   );
 };

@@ -12,7 +12,7 @@
     max-width: 1281px;
     padding: 0;
     margin: 0;
-    margin-left: 60px;
+    margin-left: -18px;
   }
 }
 
@@ -36,7 +36,7 @@
   left: 10px;
 
   @media (min-width: $desktop-width) {
-    left: -80px;
+    left: -48px;
   }
 }
 
@@ -45,7 +45,7 @@
 
   @media (min-width: $desktop-width) {
     left: auto;
-    right: -80px;
+    right: -48px;
   }
 }
 
@@ -84,7 +84,6 @@
   .sliderWrapper {
     padding: 0 30px;
   }
-
 }
 
 .eventSlider {
