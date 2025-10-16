@@ -2,6 +2,7 @@
   "name": "omly-test",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://ivanmalks.github.io/only-test/",
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",

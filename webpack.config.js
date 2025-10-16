@@ -1,14 +1,21 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const pkg = require('./package.json');
+
+let publicPath = '/';
+
+const isProduction = process.env.NODE_ENV === 'production';
+if (isProduction && pkg.homepage) {
+  publicPath = new URL(pkg.homepage).pathname;
+}
 
 module.exports = {
-  mode: 'development',
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.[contenthash].js',
-    publicPath: '/',
+    publicPath: publicPath,
     clean: true,
   },
   module: {
