@@ -3,18 +3,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans:wght@400;700&display=swap');
 
 body {
-    margin: 0;
-    font-family: $font-main;
-    background-color: $bg-color;
-    color: $primary-text;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-    
-* {
-    box-sizing: border-box;
+  margin: 0;
+  font-family: $font-main;
+  background-color: $bg-color;
+  color: $primary-text;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
 
 .swiper-slide {
   width: auto !important;

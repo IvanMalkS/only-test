@@ -1,4 +1,5 @@
 @use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .timelineBlock {
   padding-left: 20px;
@@ -12,21 +13,19 @@
   font-weight: 700;
   color: $primary-text;
   line-height: 24px;
-  margin: 0;
-  padding: 0;
+  @include no-margin-padding;
   max-width: 123px;
 }
 
 @media (min-width: 1080px) {
   .timelineBlock {
     position: relative;
-    padding: 170px 160px 104px 322px ;
-    display: flex;
-    flex-direction: column;
+    padding: 170px 160px 104px 322px;
+    @include flex-column;
     align-items: center;
     min-height: 100vh;
   }
-  
+
   .title {
     display: flex;
     font-family: $font-accent;
@@ -45,8 +44,7 @@
   position: absolute;
   bottom: 17px;
   left: 15px;
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   gap: 10px;
   align-self: flex-start;
 
@@ -55,11 +53,10 @@
     margin-left: 78px;
     gap: 20px;
   }
-
 }
 
 .controlsButtons {
-  display: flex;
+  @include flex-center;
   gap: 8px;
   align-items: center;
   @media (min-width: 1024px) {

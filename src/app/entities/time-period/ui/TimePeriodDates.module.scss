@@ -1,7 +1,7 @@
 @use '../../../styles/variables' as *;
 
 .timePeriodDates {
-  display: flex;
+  @include flex-start;
   font-size: 56px;
   font-family: 'PT Sans', sans-serif;
   font-weight: 700;
@@ -31,6 +31,5 @@
     margin-top: 82px;
     margin-bottom: 148px;
     gap: 83px;
-
   }
 }

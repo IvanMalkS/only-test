@@ -1,12 +1,11 @@
 @use '../../../styles/_variables' as *;
 
-
 .browserEventsContainer {
   position: relative;
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
-  padding: 20px 0 32px 0 ;
+  padding: 20px 0 32px 0;
 
   @media (min-width: 1024px) {
     max-width: 1281px;
@@ -26,7 +25,7 @@
     top: 41px;
   }
 
-   &:disabled {
+  &:disabled {
     display: none;
   }
 }
@@ -62,8 +61,7 @@
 }
 
 .pagination {
-  display: flex;
-  justify-content: center;
+  @include flex-center;
   gap: 2px;
 
   @media (min-width: 1024px) {
@@ -74,7 +72,7 @@
 .bullet {
   width: 6px;
   height: 6px;
-  background-color: #42567A;
+  background-color: #42567a;
   opacity: 0.4;
   border-radius: 50%;
   margin: 0 4px;
@@ -89,7 +87,7 @@
   .sliderWrapper {
     padding: 0 30px;
   }
-  
+
   .buttonPrev {
     left: 0;
   }
@@ -134,4 +132,3 @@
     }
   }
 }
-

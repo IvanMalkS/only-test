@@ -1,9 +1,11 @@
+import { RefObject } from 'react';
+
 export interface Event {
-    year: number | string;
-    description: string;
-    size?: 'small'| 'medium' | 'large';
-  }
-  
+  year: number | string;
+  description: string;
+  size?: 'small' | 'medium' | 'large';
+}
+
 interface DateRange {
   start: number;
   end: number;
@@ -11,6 +13,13 @@ interface DateRange {
 export interface TimePeriod {
   id: number;
   title: string;
-  dateRange: DateRange
+  dateRange: DateRange;
   events: Event[];
+}
+
+export interface TimePeriodDatesProps {
+  startDate: number;
+  endDate: number;
+  startRef: RefObject<HTMLSpanElement>;
+  endRef: RefObject<HTMLSpanElement>;
 }

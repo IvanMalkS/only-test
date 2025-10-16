@@ -1,10 +1,7 @@
 import React from 'react';
 import styles from './ArrowButton.module.scss';
 import clsx from 'clsx';
-
-interface ArrowButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  direction: 'prev' | 'next';
-}
+import { ArrowButtonProps } from '../model/types';
 
 export const ArrowButton: React.FC<ArrowButtonProps> = ({ direction, className, ...props }) => {
   const buttonClassName = clsx(
@@ -12,7 +9,7 @@ export const ArrowButton: React.FC<ArrowButtonProps> = ({ direction, className, 
     {
       [styles.next]: direction === 'next',
     },
-    className
+    className,
   );
   return (
     <button className={buttonClassName} {...props}>

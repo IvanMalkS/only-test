@@ -1,8 +1,7 @@
 @use '../../../styles/_variables' as *;
 
 .card {
-  display: flex;
-  flex-direction: column;
+  @include flex-column;
   width: 100%;
   gap: 15px;
 }
@@ -17,7 +16,7 @@
   text-transform: uppercase;
 
   @media (min-width: 767px) {
-      font-size: 25px;
+    font-size: 25px;
   }
 }
 
@@ -54,7 +53,6 @@
 .large {
   width: 260px;
 
-  
   @media (min-width: 1024px) {
     width: 440px;
   }

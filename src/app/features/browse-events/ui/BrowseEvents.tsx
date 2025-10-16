@@ -52,7 +52,7 @@ export const BrowseEvents: React.FC<BrowseEventsProps> = ({ events }) => {
           prevEl: `.${styles.buttonPrev}`,
         }}
         breakpoints={{
-           1024: {
+          1024: {
             slidesPerView: 'auto',
             spaceBetween: 80,
           },
