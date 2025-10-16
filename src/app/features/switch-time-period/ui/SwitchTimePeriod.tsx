@@ -30,7 +30,7 @@ export const SwitchTimePeriod: React.FC<SwitchTimePeriodProps> = ({
   const activeY = CIRCLE_RADIUS * Math.sin(activeAngleRad);
 
   return (
-    <div className={styles.wrapper}>
+    <>
       <div className={styles.circleContainer}>
         <div className={styles.circle} ref={circleRef}>
           {periods.map((period, index) => {
@@ -65,6 +65,7 @@ export const SwitchTimePeriod: React.FC<SwitchTimePeriodProps> = ({
           </div>
         </div>
       </div>
-    </div>
+   
+    </>
   );
 };
