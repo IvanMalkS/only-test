@@ -17,6 +17,9 @@ export const TimelineBlock = () => {
   const startDateRef = useRef<HTMLSpanElement>(null);
   const endDateRef = useRef<HTMLSpanElement>(null);
   const containerRef = useRef<HTMLElement>(null);
+
+  const prevPeriodRef = useRef(currentPeriod);
+
   const handlePrev = () => {
     setActiveIndex((prevIndex) => Math.max(prevIndex - 1, 0));
   };
@@ -26,12 +29,44 @@ export const TimelineBlock = () => {
   };
 
   useEffect(() => {
-    gsap.fromTo(
-      [startDateRef.current, endDateRef.current],
-      { opacity: 0, y: 30 },
-      { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 },
+    const startDateEl = startDateRef.current;
+    const endDateEl = endDateRef.current;
+
+    if (!startDateEl || !endDateEl) return;
+
+    const prevStartDate = prevPeriodRef.current.dateRange.start;
+    const prevEndDate = prevPeriodRef.current.dateRange.end;
+    const newStartDate = currentPeriod.dateRange.start;
+    const newEndDate = currentPeriod.dateRange.end;
+
+    const startCounter = { value: prevStartDate };
+    const endCounter = { value: prevEndDate };
+
+    const tl = gsap.timeline();
+
+    tl.to(startCounter, {
+      value: newStartDate,
+      duration: 0.5,
+      ease: 'power2.out',
+      onUpdate: () => {
+        startDateEl.textContent = String(Math.round(startCounter.value));
+      },
+    }).to(
+      endCounter,
+      {
+        value: newEndDate,
+        duration: 0.5,
+        ease: 'power2.out',
+        onUpdate: () => {
+          endDateEl.textContent = String(Math.round(endCounter.value));
+        },
+      },
+      '<'
     );
-  }, [activeIndex]);
+
+    prevPeriodRef.current = currentPeriod;
+    
+  }, [activeIndex, currentPeriod]);
 
   return (
     <section className={clsx(styles.timelineBlock)} ref={containerRef}>
